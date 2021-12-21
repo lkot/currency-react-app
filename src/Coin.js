@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Coin({ image, name, symbol, price, volume }) {
+// Later on add types protection.
+function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
 	return (
 		<div className='coin-container'>
 			<div className='coin-row'>
@@ -17,6 +18,7 @@ function Coin({ image, name, symbol, price, volume }) {
 					) : (
 						<p className='coin-percent green'>{priceChange.toFixed(2)}%</p>
 					)}
+                    <p className="coin-marketcap">Mkt Cap: ${marketcap.toLocaleString()}</p>
 				</div>
 			</div>
 		</div>
