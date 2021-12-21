@@ -1,4 +1,5 @@
 import React from 'react';
+import './Coin.css';
 
 // Later on add types protection.
 function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
