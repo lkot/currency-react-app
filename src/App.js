@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Coin from './components/Coin/Coin';
+import Loader from './components/Loader/Loader';
 
 const API_LINK =
 	'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false';
@@ -9,6 +10,7 @@ const API_LINK =
 function App() {
 	const [coins, setCoins] = useState([]);
 	const [search, setSerach] = useState('');
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
 		axios
@@ -30,7 +32,7 @@ function App() {
 		coin.name.toLowerCase().includes(search.toLowerCase())
 	);
 
-	return (
+	return !loading ? (
 		<div className='coin-app'>
 			<div className='coin-search'>
 				<h1 className='coin-text'>Search for a crypto</h1>
@@ -59,6 +61,8 @@ function App() {
 				);
 			})}
 		</div>
+	) : (
+		<Loader />
 	);
 }
 
