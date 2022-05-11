@@ -13,11 +13,16 @@ function App() {
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
+		setLoading(true);
+
 		axios
 			.get(API_LINK)
 			.then((res) => {
 				setCoins(res.data);
+
 				// console.log(res.data)
+
+				setLoading(false);
 			})
 			.catch((err) => console.log(err));
 	}, []);
