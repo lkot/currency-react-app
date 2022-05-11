@@ -4,9 +4,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-  /* background: url('./1-pexels-video.mp4'); */
-
-
+	/* background: url('./1-pexels-video.mp4'); */
 }
 
 html {
@@ -19,17 +17,16 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  padding-top: 50px;
-  padding-top: 50px;
+	padding-top: 50px;
+	padding-top: 50px;
 	color: #fff;
-  background-image: url('./assets/background-red.jpg');
+	background-image: url('./assets/background-red.jpg');
 	background-size: cover;
 	background-position: center;
-  background-attachment: fixed;
-  overflow: auto;
+	background-attachment: fixed;
+	overflow: auto;
 	filter: brightness(90%);
-  height: 100vh;
-
+	height: 100vh;
 }
 
 .coin-search {
@@ -53,9 +50,8 @@ html {
 	border: none;
 	background-image: #fff;
 	color: #000;
-  outline: none;
-  font-family: 'Ubuntu', sans-serif;
-
+	outline: none;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 .coin-input::placeholder {
